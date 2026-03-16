@@ -1,0 +1,18 @@
+/*rest e estilos base*/
+/*'0' é um seletor universal que aplica estilos a todos os elementos d pagina*/
+*{
+    margin: 0; /*revomve as margens padraõ que os navegadores adicionam*/
+    padding: 0; /*remove os espamentos internos padrão*/
+box-sizing: border-box;/**/    
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;/*o tamnho da fonte*/
+    color: #333;/*cor do texto maronn*/
+/*gradiente de fundo : 135deg e a direção, roxo claro para roxo escuro*/
+background: linear-gradient(135deg,#87CEEB 0%, #1E90FF 100%);
+padding: 1rem 5%;/*1rem=a 16 px*/
+display: flex;/*ativa o flax bo mas flex box*/
+align-items: center;/*alinha os itens verticamente centro*/
+
+}
