@@ -1,18 +1,59 @@
 /*rest e estilos base*/
 /*'0' é um seletor universal que aplica estilos a todos os elementos d pagina*/
-*{
-    margin: 0; /*revomve as margens padraõ que os navegadores adicionam*/
-    padding: 0; /*remove os espamentos internos padrão*/
-box-sizing: border-box;/**/    
+* {
+  margin: 0; /*revomve as margens padraõ que os navegadores adicionam*/
+  padding: 0; /*remove os espamentos internos padrão*/
+  box-sizing: border-box; /**/
 }
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;/*o tamnho da fonte*/
-    color: #333;/*cor do texto maronn*/
-/*gradiente de fundo : 135deg e a direção, roxo claro para roxo escuro*/
-background: linear-gradient(135deg,#87CEEB 0%, #1E90FF 100%);
-padding: 1rem 5%;/*1rem=a 16 px*/
-display: flex;/*ativa o flax bo mas flex box*/
-align-items: center;/*alinha os itens verticamente centro*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6; /*o tamnho da fonte*/
+  color: #333; /*cor do texto maronn*/
+  /*gradiente de fundo : 135deg e a direção, roxo claro para roxo escuro*/
+  background: linear-gradient(135deg, #87ceeb 0%, #1e90ff 100%);
+  min-height: 100vh;/*vh=viwport height, minimo de 100% da altura da tela*/
+}
+header {
+    background-color: rgba(255, 255, 255, 0.95);/*branco com 95% de opacidade*/
+  padding: 1rem 5%; /*1rem=a 16 px*/
+  display: flex; /*ativa o flax bo mas flex box*/
+  align-items: center; /*alinha os itens verticamente centro*/
+ justify-content: space-between;/*os espasos entres os intesns*/
+ flex-wrap: wrap;/*ele permite em telas pequenas*/ 
+gap: 1rem;/*espaçamento emtre os elementos*/
+box-shadow: 0 2px 20px rgba(0,0,0 0.1);/*sobrsa do site*/
+position: sticky;/*grudar o cabesario a roloar a pagina*/
+top: 0;/*distancia do topo ao grudar*/
+z-index: 1000;/*grante que fique em cima outros elementos*/
 
+}
+header img{
+    height: 60px;/*alutura fixa em pixel*/
+    width: auto;/*largura auto para man ter o com autura*/
+    transition: transform 0.3s ease; /*animasoes suave*/
+}
+header img:hover{/**/
+transform: scale(1.05);/*aumentar a imagem*/
+
+}
+/*===navegação na*/
+nav{
+    display: flex;gap: 2rem;/*represnta 32 px em*/
+    flex-wrap: wrap;
+}
+nav a{
+    text-decoration: none;/*remover o subrado do link*/
+    color: #764ba2;/*cor roxo*/
+    font-weight: 600;/**/
+    padding: 0.5rem 1rem;/*8px em cima em baixo 16 px nas lateris*/
+    border-radius: 25%;/*bordas ardondadas*/
+    transition: all 0.3s ease;/**/
+    position: relative;/*necessario para pseudo elemento :: after*/
+
+}
+nav a:hover{
+    background-color: #764ba2;
+    color: white;
+    transform: translate(-2px);/*move 2px para cima*/
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);/*sobra roxa suave*/
 }
