@@ -46,7 +46,7 @@ nav a{
     color: #764ba2;/*cor roxo*/
     font-weight: 600;/**/
     padding: 0.5rem 1rem;/*8px em cima em baixo 16 px nas lateris*/
-    border-radius: 25%;/*bordas ardondadas*/
+    border-radius: 25px;/*bordas ardondadas*/
     transition: all 0.3s ease;/**/
     position: relative;/*necessario para pseudo elemento :: after*/
 
@@ -56,4 +56,41 @@ nav a:hover{
     color: white;
     transform: translate(-2px);/*move 2px para cima*/
     box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);/*sobra roxa suave*/
+}
+nav a::after{
+    /*pseudo elemento para criar a linha animada abixo dos links*/
+    content: '';/*necessario para criar o elemento*/
+    position: absolute;/*posçao em relaçao ao link*/
+    bottom: 0;/*coloar a linha de bixo*/
+    left: 50%;/*comesa do meio*/
+    transform: translateX(-50%);/*centraliza horintamente*/
+width: 0;/*comesa co largura 0*/
+height: 2px;/*altura da linha*/
+background-color: #764ba2;
+transition: width 0.3s ease;/*anima apenas a largura*/
+}
+nav a:hover::after{
+width: 80%;/*expande para 80 por a largura do link*/
+}
+/*conteoudo do blog*/
+main{
+    max-width: 1200px;
+    margin: 2rem auto;/*32px em cima/baixo e auto nas laterais*/
+padding: 2rem;/*espamento interno de 32px em todos os lados*/
+background-color: rgba(255, 255, 255, 0.95);
+border-radius: 20px;/*BORDAS AREDONDADAS*/
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);/*sobra mais pronucida*/
+backdrop-filter: blur(10px);/**/
+animation:slideIn 0.5s ease-out;/*ANIMACAO DE ENRADtrada*/
+
+}
+@keyframes slideIn{/*alicando os quadros de animaçao*/
+    from{/*estado incial*/
+opacity: 0;/*incisivel*/
+transform: translateY(30px);/*30px para baixo*/
+    }
+    to{/*estado final*/
+opacity: 1;/*invisivel*/
+transform: translateY(0);/*posisao original*/
+    }
 }
